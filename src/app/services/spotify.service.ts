@@ -6,7 +6,7 @@ import Spotify from 'spotify-web-api-js';
 })
 export class SpotifyService {
 
-  spotifyApi:Spotify.SpotifyWebApiJs=null;
+  spotifyApi:Spotify.SpotifyWebApiJs;
 
 
 
@@ -37,7 +37,7 @@ export class SpotifyService {
   definirAcessToken(token:string){
     this.spotifyApi.setAccessToken(token);
     localStorage.setItem('token',token);
-    this.spotifyApi.skipToNext();
+    // this.spotifyApi.skipToNext();
   }
 
 }
